@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="number_of_songs">
+        <item quantity="one">%d Song</item>
+        <item quantity="other">%d Songs</item>
+    </plurals>
+
+    <plurals name="songs_selected">
+        <item quantity="one">%d Song Selected</item>
+        <item quantity="other">%d Songs Selected</item>
+    </plurals>
+
+    <plurals name="number_of_albums">
+        <item quantity="one">%d Album</item>
+        <item quantity="other">%d Albums</item>
+    </plurals>
+
+    <plurals name="total_times">
+        <item quantity="one">%d Time</item>
+        <item quantity="other">%d Times</item>
+    </plurals>
+
+    <plurals name="number_of_bookmarks">
+        <item quantity="one">%d Bookmark</item>
+        <item quantity="other">%d Bookmarks</item>
+    </plurals>
+
+    <plurals name="best_matches">
+        <item quantity="one">%d Best Match</item>
+        <item quantity="other">%d Best Matches</item>
+    </plurals>
+
+    <plurals name="minutes_plural" translatable="false">
+        <item quantity="one">%d Minute</item>
+        <item quantity="other">%d Minutes</item>
+    </plurals>
+
+    <plurals name="hours_plural" translatable="false">
+        <item quantity="one">%d Hour</item>
+        <item quantity="other">%d Hours</item>
+    </plurals>
+</resources>

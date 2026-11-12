@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.simple.felicity.decorations.padding.PaddingAwareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/padding_15">
+
+        <app.simple.felicity.decorations.typeface.TypeFaceTextView
+            android:id="@+id/jamesdsp_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_36"
+            android:text="@string/jamesdsp"
+            android:paddingVertical="@dimen/padding_10"
+            app:appFontStyle="black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/jamesdsp_master_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textColorStyle="primary" />
+
+        <app.simple.felicity.decorations.toggles.FelicitySwitch
+            android:id="@+id/jamesdsp_master_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:felicitySwitchCheckedElevation="0dp"
+            app:felicitySwitchDisableAncestorClipping="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <app.simple.felicity.decorations.theme.ThemeDivider
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:saveEnabled="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/padding_15"
+            android:paddingVertical="@dimen/padding_15">
+
+            <!-- ===================== Bass Boost ===================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <app.simple.felicity.decorations.typeface.TypeFaceTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="@string/jamesdsp_bass_boost"
+                    app:appFontStyle="bold"
+                    app:textColorStyle="heading" />
+
+                <app.simple.felicity.decorations.toggles.FelicitySwitch
+                    android:id="@+id/bass_boost_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:felicitySwitchCheckedElevation="0dp"
+                    app:felicitySwitchDisableAncestorClipping="false" />
+
+            </LinearLayout>
+
+            <app.simple.felicity.decorations.knobs.FelicityKnobView
+                android:id="@+id/bass_boost_knob"
+                android:layout_width="@dimen/balance_knob_dimension"
+                android:layout_height="@dimen/balance_knob_dimension"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/padding_15" />
+
+            <app.simple.felicity.decorations.theme.ThemeDivider
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginVertical="@dimen/padding_15" />
+
+            <!-- ===================== Reverb ===================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <app.simple.felicity.decorations.typeface.TypeFaceTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="@string/jamesdsp_reverb"
+                    app:appFontStyle="bold"
+                    app:textColorStyle="heading" />
+
+                <app.simple.felicity.decorations.toggles.FelicitySwitch
+                    android:id="@+id/reverb_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:felicitySwitchCheckedElevation="0dp"
+                    app:felicitySwitchDisableAncestorClipping="false" />
+
+            </LinearLayout>
+
+            <app.simple.felicity.decorations.toggles.FelicityButtonGroup
+                android:id="@+id/reverb_preset_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_15" />
+
+            <app.simple.felicity.decorations.theme.ThemeDivider
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginVertical="@dimen/padding_15" />
+
+            <!-- ===================== Crossfeed ===================== -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <app.simple.felicity.decorations.typeface.TypeFaceTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="@string/jamesdsp_crossfeed"
+                    app:appFontStyle="bold"
+                    app:textColorStyle="heading" />
+
+                <app.simple.felicity.decorations.toggles.FelicitySwitch
+                    android:id="@+id/crossfeed_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:felicitySwitchCheckedElevation="0dp"
+                    app:felicitySwitchDisableAncestorClipping="false" />
+
+            </LinearLayout>
+
+            <app.simple.felicity.decorations.toggles.FelicityButtonGroup
+                android:id="@+id/crossfeed_mode_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_15" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</app.simple.felicity.decorations.padding.PaddingAwareLinearLayout>

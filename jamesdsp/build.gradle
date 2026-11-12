@@ -1,0 +1,34 @@
+apply plugin: 'com.android.library'
+apply from: rootProject.file('common.gradle')
+
+// JamesDSP effects engine, bundled directly from JamesDSPManager's legacy
+// native source (see src/main/cpp/CMakeLists.txt for provenance notes) and
+// exposed to Kotlin via a JNI wrapper ported from RootlessJamesDSP. This
+// module owns only the engine + JNI glue + Kotlin data/control layer
+// (JamesDspWrapper.kt, EelVmVariable.kt); the AudioProcessor adapter that
+// plugs it into Felicity's playback chain lives in :engine, which depends
+// on this module.
+android {
+    namespace 'app.simple.felicity.engine.jamesdsp'
+
+    defaultConfig {
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
+        }
+    }
+
+    ndkVersion = libs.versions.ndk.get()
+
+    externalNativeBuild {
+        cmake {
+            path = "src/main/cpp/CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation project(':shared')
+    implementation project(':core')
+}
